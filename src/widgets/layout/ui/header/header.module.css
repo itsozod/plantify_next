@@ -1,0 +1,31 @@
+.header_layout {
+  padding: 10px 50px 10px 50px;
+  background-color: #004f44;
+  width: 100%;
+}
+.header_layout_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header_list {
+  list-style-type: none;
+  color: #fff;
+}
+.nav_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 650px;
+  width: 100%;
+}
+.icons_container {
+  display: flex;
+  gap: 10px;
+}
+.header_link {
+  text-decoration: none;
+  color: #fff;
+}
