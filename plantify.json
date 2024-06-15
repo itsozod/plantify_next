@@ -1,0 +1,29 @@
+{
+  "plants": [
+    {
+      "id": 1,
+      "title": "Peperomia Ginny",
+      "img": "https://i.postimg.cc/Zqbhmtnh/image-8.png"
+    },
+    {
+      "id": 2,
+      "title": "Bird's nest Fern",
+      "img": "https://i.postimg.cc/sg9RbDVc/image-9.png"
+    },
+    {
+      "id": 3,
+      "title": "Large Magesty Palm",
+      "img": "https://i.postimg.cc/tgBGCSnn/image-10.png"
+    },
+    {
+      "id": 4,
+      "title": "Pet Friendly Plant",
+      "img": "https://i.postimg.cc/SxphZzpR/image-11.png"
+    },
+    {
+      "id": 5,
+      "title": "Peperomia Ginny",
+      "img": "https://i.postimg.cc/Zqbhmtnh/image-8.png"
+    }
+  ]
+}
