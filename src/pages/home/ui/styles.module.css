@@ -1,0 +1,18 @@
+.flower_container {
+  padding: 10px 50px 10px 50px;
+  background-color: #004f44;
+}
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #004f44;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: start;
+  }
+}

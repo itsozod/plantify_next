@@ -1,0 +1,27 @@
+.card {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.btn_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.explore_btn {
+  background-color: #004f44;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.shop_btn {
+  background-color: #fff;
+  border: none;
+  padding: 16px 23px;
+  cursor: pointer;
+  box-shadow: 0px 1px 1px black;
+}

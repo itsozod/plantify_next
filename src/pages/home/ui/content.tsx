@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import styles from "./styles.module.css";
+import { HomeTitle } from "../components/HomeTitle";
+import { FlowerCard } from "../components/HomeFlower";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <div className={styles["flower_container"]}>
+        <div className={styles["content"]}>
+          <HomeTitle />
+          <FlowerCard />
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Home
+export default Home;
