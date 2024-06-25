@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
-import { HomeTitle } from "../components/HomeTitle";
-import { FlowerCard } from "../components/HomeFlower";
+import { HomeTitle } from "./HomeTitle";
+import { FlowerCard } from "./HomeFlower";
 
 const Home = () => {
   return (
