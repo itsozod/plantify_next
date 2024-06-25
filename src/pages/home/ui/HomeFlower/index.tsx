@@ -5,7 +5,7 @@ import Flower1 from "@/src/shared/assets/image 1.png";
 import Flower2 from "@/src/shared/assets/image 2.png";
 import Flower3 from "@/src/shared/assets/image 3.png";
 
-export const FlowerCard = () => {
+export const HomeFlower = () => {
   return (
     <>
       <div className={styles["flower_card"]}>

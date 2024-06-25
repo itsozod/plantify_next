@@ -1,7 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 import styles from "./styles.module.css";
 import { HomeTitle } from "./HomeTitle";
-import { FlowerCard } from "./HomeFlower";
+import { HomeFlower } from "./HomeFlower";
+import FlowerCards from "./FlowerCards/FlowerCards";
+import ErrorBoundary from "./FlowerCards/error";
 
 const Home = () => {
   return (
@@ -9,8 +11,13 @@ const Home = () => {
       <div className={styles["flower_container"]}>
         <div className={styles["content"]}>
           <HomeTitle />
-          <FlowerCard />
+          <HomeFlower />
         </div>
+        <ErrorBoundary>
+          <Suspense fallback={<div>Loading...</div>}>
+            <FlowerCards />
+          </Suspense>
+        </ErrorBoundary>
       </div>
     </>
   );
