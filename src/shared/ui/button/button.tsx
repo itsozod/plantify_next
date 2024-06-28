@@ -16,6 +16,7 @@ export const Button: FC<ButtonProps> = ({
   type = "button",
   className = "",
   style,
+
   ...props
 }) => {
   return (

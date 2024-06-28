@@ -12,7 +12,7 @@ const getPosts = async () => {
   return data;
 };
 
-const About = async () => {
+const Cart = async () => {
   const posts = await getPosts();
   console.log(posts);
   return (
@@ -24,4 +24,4 @@ const About = async () => {
   );
 };
 
-export default About;
+export default Cart;

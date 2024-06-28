@@ -1,11 +1,9 @@
 import React from "react";
 import styles from "./styles.module.css";
-import {
-  IconCart,
-  IconSearch,
-  IconUser,
-  PlantifyLogo,
-} from "@/src/shared/icons";
+import { PlantifyLogo } from "@/src/shared/icons";
+
+import { ButtonsContainer } from "./ButtonsContainer";
+import { Links } from "./Links";
 
 const Header = () => {
   return (
@@ -18,36 +16,13 @@ const Header = () => {
               gap: "25px",
             }}
           >
-            <li className={styles["header_list"]}>
-              <a className={styles["header_link"]} href="#">
-                Shop
-              </a>
-            </li>
-            <li className={styles["header_list"]}>
-              <a className={styles["header_link"]} href="#">
-                Products
-              </a>
-            </li>
-            <li className={styles["header_list"]}>
-              <a className={styles["header_link"]} href="#">
-                Fertilizer
-              </a>
-            </li>
-            <li className={styles["header_list"]}>
-              <a className={styles["header_link"]} href="#">
-                Guide
-              </a>
-            </li>
+            <Links />
           </ul>
           <div>
             <PlantifyLogo />
           </div>
         </nav>
-        <div className={styles["icons_container"]}>
-          <IconSearch />
-          <IconUser />
-          <IconCart />
-        </div>
+        <ButtonsContainer />
       </div>
     </header>
   );

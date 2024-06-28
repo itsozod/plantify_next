@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { HomeTitle } from "./HomeTitle";
 import { HomeFlower } from "./HomeFlower";
 import FlowerCards from "./FlowerCards/FlowerCards";
-import ErrorBoundary from "@/src/shared/ui/error/error";
+import UI from "@/src/shared/ui";
 
 const Home = () => {
   return (
@@ -14,9 +14,9 @@ const Home = () => {
           <HomeFlower />
         </div>
       </div>
-      <ErrorBoundary>
+      <UI.ErrorBoundary>
         <FlowerCards />
-      </ErrorBoundary>
+      </UI.ErrorBoundary>
     </>
   );
 };
