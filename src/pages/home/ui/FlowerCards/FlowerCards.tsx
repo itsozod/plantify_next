@@ -1,22 +1,48 @@
 "use client";
-import { FlowerCardApi } from "@/src/entities/FlowerCard";
 import { useFlowerCard } from "@/src/entities/FlowerCard/api/api";
 import { Flower } from "@/src/entities/FlowerCard/lib/types";
+import { FlowerCardUi } from "@/src/entities/FlowerCard/ui/FlowerCardUi";
+import { useMemo } from "react";
+import styles from "./FlowerCards.module.css";
+import FlowersLoader from "./loader/loader";
 
 const FlowerCards = () => {
-  // const data = await FlowerCardApi();
   const { data, error, isLoading } = useFlowerCard();
-  if (isLoading) return <div>Loading...</div>;
+  const FlowerCardParser = useMemo(() => {
+    return data?.map((flower: Flower) => {
+      return (
+        <>
+          <FlowerCardUi flower={flower} />
+        </>
+      );
+    });
+  }, [data]);
+
+  if (isLoading) return <FlowersLoader />;
   if (error) return <div>Error ocurred</div>;
+
   return (
-    <div>
-      {data?.map((flower: Flower) => {
-        return (
-          <>
-            <div>{flower?.title}</div>
-          </>
-        );
-      })}
+    <div
+      style={{
+        padding: "10px 50px 10px 50px",
+        background: "#fff",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+        }}
+      >
+        <h1
+          style={{
+            color: "#004f44",
+          }}
+        >
+          Featured
+        </h1>
+        <div className={styles["plants_container"]}>{FlowerCardParser}</div>
+      </div>
     </div>
   );
 };

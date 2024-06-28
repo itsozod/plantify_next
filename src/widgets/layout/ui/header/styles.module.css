@@ -20,6 +20,9 @@
   justify-content: space-between;
   max-width: 650px;
   width: 100%;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 }
 .icons_container {
   display: flex;

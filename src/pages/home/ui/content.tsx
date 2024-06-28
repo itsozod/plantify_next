@@ -1,9 +1,9 @@
-import React, { Suspense } from "react";
+import React from "react";
 import styles from "./styles.module.css";
 import { HomeTitle } from "./HomeTitle";
 import { HomeFlower } from "./HomeFlower";
 import FlowerCards from "./FlowerCards/FlowerCards";
-import ErrorBoundary from "./FlowerCards/error";
+import ErrorBoundary from "@/src/shared/ui/error/error";
 
 const Home = () => {
   return (
@@ -13,12 +13,10 @@ const Home = () => {
           <HomeTitle />
           <HomeFlower />
         </div>
-        <ErrorBoundary>
-          <Suspense fallback={<div>Loading...</div>}>
-            <FlowerCards />
-          </Suspense>
-        </ErrorBoundary>
       </div>
+      <ErrorBoundary>
+        <FlowerCards />
+      </ErrorBoundary>
     </>
   );
 };
