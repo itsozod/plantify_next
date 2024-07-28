@@ -1,9 +1,9 @@
 import useSWR from "swr";
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 export const useFlowerCard = () => {
-  const { data, error, isLoading } = useSWR(
+  const { data, error, isLoading, mutate } = useSWR(
     "http://localhost:5000/plants",
     fetcher
   );
-  return { data, error, isLoading };
+  return { data, error, isLoading, mutate };
 };
