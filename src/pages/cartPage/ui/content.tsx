@@ -1,4 +1,5 @@
 import React from "react";
+import { CartAdd } from "./cartAdd";
 
 type Post = {
   id: number;
@@ -20,6 +21,8 @@ const Cart = async () => {
       {posts?.map((post: Post) => {
         return <div key={post?.id}>{post?.title}</div>;
       })}
+
+      <CartAdd />
     </>
   );
 };

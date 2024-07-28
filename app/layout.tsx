@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/src/widgets/layout/ui/header";
 import Footer from "@/src/widgets/layout/ui/footer";
 import { SWRConfig } from "swr";
+import Provider from "./providers/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,18 +21,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            minHeight: "100vh",
-            position: "relative",
-          }}
-        >
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <Provider>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              minHeight: "100vh",
+              position: "relative",
+            }}
+          >
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </Provider>
       </body>
     </html>
   );

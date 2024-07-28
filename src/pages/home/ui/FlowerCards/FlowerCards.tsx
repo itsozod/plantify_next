@@ -35,11 +35,7 @@ const FlowerCards = () => {
     }
   };
   const { data, error, isLoading, mutate } = useFlowerCard();
-  const {
-    data: mutateData,
-    isMutating,
-    trigger,
-  } = useSWRMutation("http://localhost:5000/plants", signUp);
+  const { trigger } = useSWRMutation("http://localhost:5000/plants", signUp);
   const FlowerCardParser = useMemo(() => {
     return data?.map((flower: Flower) => {
       return (
